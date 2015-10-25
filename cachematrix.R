@@ -1,8 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-## The function should take in any matrix and cache it
+## The first function should take in any matrix
+## use get and set functions for retrieving the matrix
+## and also retrieving the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
     m <<- NULL
@@ -16,7 +14,10 @@ makeCacheMatrix <- function(x = matrix()) {
     list(set = set, get = get, setinverse = setinverse, getinverse=getinverse)
 }
 
-## Write a short comment describing this function
+## This function uses 'solve' to get the inverse since
+## the assumption is that the given matrix is invertible
+## Note: the use of caching to get the value of matrix if the inverse exists
+## in the cache 
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
